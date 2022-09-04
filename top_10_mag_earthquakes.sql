@@ -1,0 +1,5 @@
+
+SELECT *
+FROM view_event
+ORDER BY mag DESC
+LIMIT 10
