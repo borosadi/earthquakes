@@ -2,12 +2,12 @@ WITH
 m as (
     SELECT 
         CASE
-            WHEN mag <= 1 THEN '0-1 magnitude'
-            WHEN mag <= 2 THEN '1-2 magnitude'
-            WHEN mag <= 3 THEN '2-3 magnitude'
-            WHEN mag <= 4 THEN '3-4 magnitude'
-            WHEN mag <= 5 THEN '4-5 magnitude'
-            WHEN mag <= 6 THEN '5-6 magnitude'
+            WHEN mag < 1 THEN '0-1 magnitude'
+            WHEN mag < 2 THEN '1-2 magnitude'
+            WHEN mag < 3 THEN '2-3 magnitude'
+            WHEN mag < 4 THEN '3-4 magnitude'
+            WHEN mag < 5 THEN '4-5 magnitude'
+            WHEN mag < 6 THEN '5-6 magnitude'
             WHEN mag > 6 THEN '>6 magnitude'
             ELSE 'invalid magnitude value'
         END AS magnitude,
